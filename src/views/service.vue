@@ -10,7 +10,7 @@
           <b-navbar-nav>
             <b-nav-item href="/">Home</b-nav-item>
             <b-nav-item
-            ><router-link to="/about">About</router-link></b-nav-item
+              ><router-link to="/about">About</router-link></b-nav-item
             >
           </b-navbar-nav>
 
@@ -20,9 +20,9 @@
               <!-- Using 'button-content' slot -->
               <template #button-content>
                 <b-avatar
-                    variant="info"
-                    src="https://placekitten.com/300/300"
-                    class="mr-3"
+                  variant="info"
+                  src="https://placekitten.com/300/300"
+                  class="mr-3"
                 ></b-avatar>
                 <span class="mr-auto">{{ userData[0].fullname }}</span>
               </template>
@@ -30,10 +30,10 @@
             </b-nav-item-dropdown>
             <b-navbar-nav v-else>
               <b-nav-item
-              ><router-link to="/login">Login</router-link></b-nav-item
+                ><router-link to="/login">Login</router-link></b-nav-item
               >
               <b-nav-item
-              ><router-link to="/signin">SignIn</router-link></b-nav-item
+                ><router-link to="/signin">SignIn</router-link></b-nav-item
               >
             </b-navbar-nav>
           </b-navbar-nav>
@@ -52,47 +52,43 @@
                 <b-form class="w-75 mx-auto">
                   <b-form-group id="input-group-4">
                     <b-form-input
-                        id="input-4"
-                        v-model="id"
-                        type="text"
-                        :placeholder="id"
-                        :value="id"
-                        disabled
+                      id="input-4"
+                      v-model="id"
+                      type="text"
+                      :placeholder="id"
+                      :value="id"
+                      disabled
                     />
                   </b-form-group>
                   <b-form-group id="input-group-4">
                     <b-form-input
-                        id="input-4"
-                        v-model="name"
-                        type="text"
-                        :value="name"
-                        disabled
+                      id="input-4"
+                      v-model="name"
+                      type="text"
+                      :value="name"
+                      disabled
                     />
                   </b-form-group>
                   <b-form-group id="input-group-4">
                     <b-form-input
-                        id="input-4"
-                        v-model="location"
-                        type="text"
-                        :value="location"
-                        disabled
+                      id="input-4"
+                      v-model="location"
+                      type="text"
+                      :value="location"
+                      disabled
                     />
                   </b-form-group>
                   <b-form-textarea
-                      id="textarea"
-                      v-model="description"
-                      :value="description"
-                      rows="3"
-                      max-rows="6"
-                      disabled
+                    id="textarea"
+                    v-model="description"
+                    :value="description"
+                    rows="3"
+                    max-rows="6"
+                    disabled
                   ></b-form-textarea>
                 </b-form>
                 <br />
-                <b-button
-                    type="submit"
-                    variant="outline-primary"
-                    href="/"
-                >
+                <b-button type="submit" variant="outline-primary" href="/">
                   Go Home
                 </b-button>
               </div>
@@ -104,12 +100,11 @@
   </div>
 </template>
 
-
 <script>
-import {mapGetters, mapState} from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
-name: "service",
+  name: "service",
   data() {
     return {
       id: "",
@@ -120,9 +115,9 @@ name: "service",
   },
   beforeMount() {
     (this.id = this.$store.state.service[0].id),
-        (this.name = this.$store.state.service[0].Name),
-        (this.location = this.$store.state.service[0].Localisation),
-        (this.description = this.$store.state.service[0].Resume);
+      (this.name = this.$store.state.service[0].Name),
+      (this.location = this.$store.state.service[0].Localisation),
+      (this.description = this.$store.state.service[0].Resume);
   },
   computed: {
     ...mapState(["login", "service", "userData"]),
@@ -140,11 +135,8 @@ name: "service",
       return this.$store.getters.loggedIn;
     }
   },
-  methods: {
-  }
-}
+  methods: {}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

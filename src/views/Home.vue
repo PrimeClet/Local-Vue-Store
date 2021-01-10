@@ -26,7 +26,9 @@
                 ></b-avatar>
                 <span class="mr-auto">{{ userData[0].fullname }}</span>
               </template>
-              <b-dropdown-item href="#" @click="supprimer">Sign Out</b-dropdown-item>
+              <b-dropdown-item href="#" @click="supprimer"
+                >Sign Out</b-dropdown-item
+              >
             </b-nav-item-dropdown>
             <b-navbar-nav v-else>
               <b-nav-item
@@ -51,14 +53,16 @@
             >
             <span class="float-right">
               <b-button variant="outline-primary" class="float-left"
-                ><router-link to="/services/create"><b-icon-plus-circle-fill class="mx-auto" /> Add
-                Service</router-link></b-button
+                ><router-link to="/services/create"
+                  ><b-icon-plus-circle-fill class="mx-auto" /> Add
+                  Service</router-link
+                ></b-button
               >
             </span>
           </b-col>
         </b-row>
         <b-row class="mx-2">
-          <b-col md="3" v-for="i in services  " :key="i.id" class="mb-3 -mt-2">
+          <b-col md="3" v-for="i in services" :key="i.id" class="mb-3 -mt-2">
             <b-card
               img-src="https://placekitten.com/1000/300"
               img-alt="Card image"
@@ -70,12 +74,12 @@
 
               <template #footer>
                 <b-button
-                    variant="outline-success"
-                    class="float-left"
-                    v-on:click="getItem(i.id)"
-                ><router-link :to="`/services/` + i.id"
-                >Voir</router-link
-                ></b-button
+                  variant="outline-success"
+                  class="float-left"
+                  v-on:click="getItem(i.id)"
+                  ><router-link :to="`/services/` + i.id"
+                    >Voir</router-link
+                  ></b-button
                 >
                 <b-button
                   variant="outline-primary"
@@ -130,7 +134,7 @@ export default {
       });
     },
     supprimer() {
-      this.$store.state.login = false
+      this.$store.state.login = false;
     }
   }
 };

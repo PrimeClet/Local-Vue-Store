@@ -65,7 +65,7 @@ export default new Vuex.Store({
         Localisation: "Douala, PK14",
         Resume:
           "La coiffure est métier où l'on est le plus souvent debout. ... Le coiffeur / la coiffeuse travaille comme salarié dans un salon de coiffure indépendant ou franchisé ou à domicile. C'est également un commerçant qui vend des produits capillaires et des accessoires.",
-        user_id: 'S001'
+        user_id: "S001"
       },
       {
         id: "S2021-2",
@@ -74,7 +74,7 @@ export default new Vuex.Store({
         Localisation: "Bonanjo, Bastos",
         Resume:
           "C'est également un commerçant qui vend des produits capillaires et des accessoires.",
-        user_id: 'S001'
+        user_id: "S001"
       },
       {
         id: "S2021-3",
@@ -83,7 +83,7 @@ export default new Vuex.Store({
         Localisation: "Biyem Assi, TKC",
         Resume:
           "comprend toutes sortes de formes de surveillance et de protection des biens et des personnes.",
-        user_id: 'S003'
+        user_id: "S003"
       },
       {
         id: "S2021-4",
@@ -91,7 +91,7 @@ export default new Vuex.Store({
         Image: "Clet",
         Localisation: "AKWA, DJoungolo",
         Resume: "Batiment et travaux Publics......",
-        user_id: 'S004'
+        user_id: "S004"
       }
     ],
     service: [
@@ -131,10 +131,10 @@ export default new Vuex.Store({
           state.service[0].Name = state.services[i].Name;
           state.service[0].Localisation = state.services[i].Localisation;
           state.service[0].Resume = state.services[i].Resume;
-          if (state.userData[0].id === state.services[i].user_id){
-            state.isToi = true
+          if (state.userData[0].id === state.services[i].user_id) {
+            state.isToi = true;
           } else {
-            state.isToi = false
+            state.isToi = false;
           }
         }
       }
@@ -164,7 +164,7 @@ export default new Vuex.Store({
       state.services.push({
         id: payload.id,
         name: payload.name,
-        Image: 'Clet',
+        Image: "Clet",
         Localisation: payload.location,
         Resume: payload.resume,
         user_id: payload.user_id

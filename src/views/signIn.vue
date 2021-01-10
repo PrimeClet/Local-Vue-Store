@@ -76,10 +76,10 @@ export default {
   },
   methods: {
     signIn() {
-      let long = this.$store.state.users.length+1;
+      let long = this.$store.state.users.length + 1;
       this.$store
         .dispatch("sign", {
-          id : 'S00'+ long,
+          id: "S00" + long,
           fullname: this.fullname,
           email: this.email,
           username: this.username,

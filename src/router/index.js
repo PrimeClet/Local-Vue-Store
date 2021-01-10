@@ -41,7 +41,7 @@ const routes = [
   {
     path: "/services/:id",
     name: "Service",
-    component: service,
+    component: service
     // beforeEnter: (to, from, next) => {
     //   console.log("dedans");
     //   if (store.state.login) {
