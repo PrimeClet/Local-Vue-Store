@@ -148,7 +148,7 @@ export default {
           name: this.name,
           location: this.location,
           resume: this.description,
-          user_id: this.userData.id
+          user_id: this.userData[0].id
         })
         .then(() => {
           this.$router.push("/");

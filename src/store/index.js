@@ -145,7 +145,7 @@ export default new Vuex.Store({
           state.services[i].id = payload.id;
           state.services[i].Name = payload.name;
           state.services[i].Localisation = payload.location;
-          state.services[i].Resume = payload.description;
+          state.services[i].Resume = payload.resume;
         }
       }
       console.log("reussi");
@@ -163,7 +163,7 @@ export default new Vuex.Store({
     keepService(state, payload) {
       state.services.push({
         id: payload.id,
-        name: payload.name,
+        Name: payload.name,
         Image: "Clet",
         Localisation: payload.location,
         Resume: payload.resume,

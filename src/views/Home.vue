@@ -68,7 +68,7 @@
               img-alt="Card image"
               img-top
             >
-              <h4 class="font-weight-bolder">{{ i.Name }}</h4>
+              <h4 class="font-weight-bolder">{{ i.Name }} {{ i.name }}</h4>
               <p>{{ i.Localisation }}</p>
               <p class="text-justify text-truncate">{{ i.Resume }}</p>
 
